@@ -1,6 +1,6 @@
 ﻿namespace AlquilerAutomoviles
 {
-    partial class Form1
+    partial class FormVehiculo
     {
         /// <summary>
         /// Variable del diseñador necesaria.

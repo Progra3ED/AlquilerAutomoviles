@@ -11,13 +11,12 @@ using System.Windows.Forms;
 
 namespace AlquilerAutomoviles
 {
-    public partial class Form1 : Form
+    public partial class FormVehiculo : Form
     {
-        List<Alquiler> alquileres = new List<Alquiler>();
-        List<Vehiculo> vehiculos = new List<Vehiculo>();
-        List<Cliente> clientes = new List<Cliente>();
+        
+        List<Vehiculo> vehiculos = new List<Vehiculo>();        
 
-        public Form1()
+        public FormVehiculo()
         {
             InitializeComponent();
         }
@@ -51,7 +50,7 @@ namespace AlquilerAutomoviles
         }
 
 
-        private void GuardarVehiculo()
+        private void Guardar()
         {
             FileStream stream = new FileStream("vehiculos.txt", FileMode.OpenOrCreate, FileAccess.Write);            
             StreamWriter writer = new StreamWriter(stream);
@@ -96,7 +95,7 @@ namespace AlquilerAutomoviles
 
                 //se manda a guardar la lista al archivo 
                 //para que ambos esten siempre sincronizados
-                GuardarVehiculo();
+                Guardar();
 
             }
 
