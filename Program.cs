@@ -16,7 +16,7 @@ namespace AlquilerAutomoviles
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormAlquiler());
+            Application.Run(new FormReporte());
         }
     }
 }
