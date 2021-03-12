@@ -27,7 +27,7 @@ namespace AlquilerAutomoviles
 
         private void Guardar()
         {
-            FileStream stream = new FileStream("alquileres.txt", FileMode.OpenOrCreate, FileAccess.Write);
+            FileStream stream = new FileStream(@"..\..\alquileres.txt", FileMode.OpenOrCreate, FileAccess.Write);
 
             StreamWriter writer = new StreamWriter(stream);
 
@@ -69,9 +69,9 @@ namespace AlquilerAutomoviles
         private void FormAlquiler_Load(object sender, EventArgs e)
         {
             //cargar los vehículos
-            if (File.Exists("vehiculos.txt"))
+            if (File.Exists(@"..\..\vehiculos.txt"))
             {
-                FileStream stream = new FileStream("vehiculos.txt", FileMode.Open, FileAccess.Read);
+                FileStream stream = new FileStream(@"..\..\vehiculos.txt", FileMode.Open, FileAccess.Read);
                 StreamReader reader = new StreamReader(stream);
 
                 while (reader.Peek() > -1)

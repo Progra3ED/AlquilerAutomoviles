@@ -62,9 +62,9 @@ namespace AlquilerAutomoviles
         {
             //cargar todos los datos a sus listas
 
-            if (File.Exists("vehiculos.txt"))
+            if (File.Exists(@"..\..\vehiculos.txt"))
             {
-                FileStream stream = new FileStream("vehiculos.txt", FileMode.Open, FileAccess.Read);
+                FileStream stream = new FileStream(@"..\..\vehiculos.txt", FileMode.Open, FileAccess.Read);
                 StreamReader reader = new StreamReader(stream);
 
                 while (reader.Peek() > -1)
@@ -81,9 +81,9 @@ namespace AlquilerAutomoviles
                 reader.Close();
             }
 
-            if (File.Exists("clientes.txt"))
+            if (File.Exists(@"..\..\clientes.txt"))
             {
-                FileStream stream = new FileStream("clientes.txt", FileMode.Open, FileAccess.Read);
+                FileStream stream = new FileStream(@"..\..\clientes.txt", FileMode.Open, FileAccess.Read);
                 StreamReader reader = new StreamReader(stream);
 
                 while (reader.Peek() > -1)
@@ -98,9 +98,9 @@ namespace AlquilerAutomoviles
                 reader.Close();
             }
 
-            if (File.Exists("alquileres.txt"))
+            if (File.Exists(@"..\..\alquileres.txt"))
             {
-                FileStream stream = new FileStream("alquileres.txt", FileMode.Open, FileAccess.Read);
+                FileStream stream = new FileStream(@"..\..\alquileres.txt", FileMode.Open, FileAccess.Read);
                 StreamReader reader = new StreamReader(stream);
 
                 while (reader.Peek() > -1)

@@ -29,9 +29,9 @@ namespace AlquilerAutomoviles
 
             //Verificar si el archivo existe para que no de error en caso de ser la
             //primera vez que corremos el programa
-            if (File.Exists("vehiculos.txt"))
+            if (File.Exists(@"..\..\vehiculos.txt"))
             {
-                FileStream stream = new FileStream("vehiculos.txt", FileMode.Open, FileAccess.Read);
+                FileStream stream = new FileStream(@"..\..\vehiculos.txt", FileMode.Open, FileAccess.Read);
                 StreamReader reader = new StreamReader(stream);
 
                 while (reader.Peek() > -1)
@@ -52,7 +52,7 @@ namespace AlquilerAutomoviles
 
         private void Guardar()
         {
-            FileStream stream = new FileStream("vehiculos.txt", FileMode.OpenOrCreate, FileAccess.Write);            
+            FileStream stream = new FileStream(@"..\..\vehiculos.txt", FileMode.OpenOrCreate, FileAccess.Write);            
             StreamWriter writer = new StreamWriter(stream);
             foreach (var vehiculo in vehiculos)
             {
